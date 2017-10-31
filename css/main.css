@@ -13,7 +13,9 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #eee;
-    background-color: #111;
+    background: url('../images/night-background.004.jpeg') no-repeat;
+    background-size: cover;
+    flex-direction: column;
 }
 
 a {
@@ -44,7 +46,14 @@ canvas {
     right: 16px;
     bottom: 16px;
 }
-
+.add {
+    padding: 10px;
+    border: none;
+    background: #88FA4E;
+    font-weight: bold;
+    /*display: block;*/
+    margin: 10px;
+}
 .links a {
     display: block;
     padding: 0 1em;
@@ -75,4 +84,15 @@ canvas {
     font-size: 0;
     background: #333 url("images/github.png") center center no-repeat;
     background-size: auto 50%;
+}
+
+#webcam-video {
+
+}
+
+#snapshot {
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    display: block;*/
 }

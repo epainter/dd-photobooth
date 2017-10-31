@@ -7,32 +7,73 @@
         <title>Shape Detection API Demo</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        <!-- <button class="add" id="snap">Snap Photo</button> -->
+        <h1>Say Boooo!</h1>
 
-          ga('create', 'UA-82213717-1', 'auto');
-          ga('send', 'pageview');
-        </script>
-
-        <canvas></canvas>
-
+        <div class="app">
+            <span id="countdowntimer">10</span>
+            <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+            <div class="photo-booth">
+                <img id="snap" />
+                <canvas id="webcam-video"></canvas>
+                <canvas id="snapshot"></canvas>
+            </div>
+        </div>
+        <div class="controls">
+          <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+          <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+          <a href="#" id="download-photo" download="dd-halloween.png" title="DD halloween" class="disabled"><i class="material-icons">thumb_up</i></a>
+        </div>
         <div class="fallback-message hidden">
             <p>Oh no, it looks like your browser does not support the Shape Detection API :(</p>
             <p class="small">However, you can still read about how this demo was made in <a href="https://blog.arnellebalane.com/introduction-to-the-shape-detection-api-e07425396861" target="_blank" rel="noopener" class="blogpost">this article</a>.</p>
         </div>
 
-        <div class="links">
+        <div class="buttons">
+            <button class="add" id="mario">Add Mario Costume</button>
+            <button class="add" id="penny">Add Penny Wise Costume</button>
+            <button class="add" id="hp">Add Harry Potter Costume</button>
+            <!-- <button class="add" id="frame">Add Frame</button>
+            <button class="add" id="bounding-box">Show API bounds</button> -->
+            <!-- <button onclick="s.showSettingsDialog()">Share</button> -->
+        </div>
+        <p>
+            Find your photos after the event at: https://photos.app.goo.gl/Nk63ZfdtgZQk6JcX2
+        </p>
+
+        <!-- <div class="app">
+
+          <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+          <video id="camera-stream"></video> -->
+          <!-- <img id="snap"> -->
+
+          <!-- <p id="error-message"></p> -->
+
+          <!-- <div class="controls">
+            <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+            <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+            <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">file_download</i></a>
+          </div> -->
+
+          <!-- Hidden canvas element. Used for taking snapshot of video. -->
+          <!-- <canvas></canvas>
+
+        </div> -->
+
+        <!-- <div class="links">
             <a href="https://blog.arnellebalane.com/introduction-to-the-shape-detection-api-e07425396861" target="_blank" rel="noopener" class="blogpost">How this was made</a>
             <a href="https://github.com/arnellebalane/shape-detection-demo" target="_blank" rel="noopener" class="github">Github</a>
-        </div>
+        </div> -->
 
+        <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
+        <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
         <script src="main.js"></script>
     </body>
 </html>
